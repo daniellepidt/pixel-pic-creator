@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Menny's Parents </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Castoro&family=Suez+One&display=swap" rel="stylesheet">
+  </head>
+  
+  <!-- Navbar seperated to different file to reduce text in file -->
+  {% include '/components/navbar.html' %}
+  
+  <body>
+    <!-- This checks whether the information required to display a picture was passed to the Frontend or not.  -->
+    <!-- If the i_boolean_matrix contains the required data - it creates the requested picture -->
+    {% if i_boolean_matrix %}
+      <h2>
+        Your requested picture is ready for you:
+      </h2>
+      <!-- Picture seperated to different file to reduce text in file -->
+      {% include '/show_picture.html' %}
+    
+    <!-- If we are on the "MainPage", with no request in the URL, we get the "Meet Menny's Parents" component -->
+    {% else %}
+      <h1>
+        Meet Menny's Parents:
+      </h1>
+      <!-- Seperated to different file to reduce text in file -->
+      {% include '/components/crew.html' %}
+    {% endif %}
+    
+    
+    <img class="home-image" src="https://finance.tau.ac.il/sites/finance.tau.ac.il/files/media_server/graphic-design/TAU%20NEW%20LOGO/TAU%20Logo_Eng_BW_Neg.png" />
+  </body>
+</html>

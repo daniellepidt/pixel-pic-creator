@@ -1,0 +1,27 @@
+/* --------------------------------------------------------*/
+/*-----------------------avatars.css-----------------------*/
+/* This css file handles the avatars.html component styles */
+/* --------------------------------------------------------*/
+
+.container {
+  height: 58.4px;
+  width: 150px;
+  position: relative;
+}
+
+.avatars-container {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  height: 30px;
+  width: 120px;
+}
+
+.avatar {
+  width: auto;
+  height: 30px;
+  border-radius: 50%;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="stylesheets/navbar.css">
+  </head>
+  <header>
+    <nav class="fixed-navbar">
+      <p class="names" dir="rtl">
+        קבוצה 7 - אלמוג אסרף 313200511, דניאל פידטילוק 322558867, ניר לבנון 313160715
+      </p>
+      <ul>
+        <li>
+          <!-- Seperated the avatars component to reduce in-page text -->
+          {% include "/components/avatars.html" %}
+        </li>
+        <!-- Render the links for the different pages by setting the navbar_menus prop in-file using Jinja -->
+        {% set navbar_menus = [
+          ('/show_picture?size=16,19&pixs=0,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,1,1,1,1,0,0,0,0,0,0,0,0,0,1,0,1,0,0,1,1,1,0,0,1,0,0,0,0,0,0,0,1,0,0,0,1,1,1,1,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,0,1,0,0,0,1,0,1,1,1,1,0,0,0,1,0,0,0,0,0,1,0,0,0,1,1,1,0,0,0,1,0,0,0,0,1,1,1,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,1,0,0,0,0,0,0,0,0,0,1,1,1,1,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0', 'Surprise'),
+          ('/show_picture?size=8,8&pixs=0,1,0,1,0,1,0,1,1,0,1,0,1,0,1,0,0,1,0,1,0,1,0,1,1,0,1,0,1,0,1,0,0,1,0,1,0,1,0,1,1,0,1,0,1,0,1,0,0,1,0,1,0,1,0,1,1,0,1,0,1,0,1,0', 'Chess Board'),
+          ('/show_picture?size=2,3&pixs=1,0,1,0,1,0', 'Easy Picture'),
+        ] -%}
+        <li>
+          <a href="/">Menny's Parents</a>
+        </li>
+        {% for href, caption in navbar_menus %}
+          <li class="links">
+            <a href="{{ href }}">
+              {{ caption }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </header>
+</html>
+
+

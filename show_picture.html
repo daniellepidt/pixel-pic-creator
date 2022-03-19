@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="stylesheets/picture.css">
+	</head>
+	<body>
+		<table>
+			<!--The first 'for' runs on the rows of the matrix -->
+			<!--The second 'for' runs on coloums inisde of each row -->
+			<!-- The 'if checks whether to add a black (True) square or a white (False) square -->
+			{% for i in range(x)%}
+				<tr>
+					{% for j in range(y) %}
+							{% if i_boolean_matrix[i][j] %}
+								<td class="bar_black"></td>
+							{% else %}
+								<td class="bar_white"></td>
+							{% endif %}
+					{% endfor %}
+				</tr>
+			{% endfor%}
+		</table>	
+	</body>
+</html>

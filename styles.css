@@ -1,0 +1,40 @@
+/* --------------------------------------------------------*/
+/*-----------------------styles.css------------------------*/
+/* This css file handles the main_page.html display        */
+/* --------------------------------------------------------*/
+
+/* The margin prevents overlap between the top of the page
+ and the navbar */
+body {
+  margin-top: 100px;
+  background: #1d1d1f;
+}
+
+p {
+  font-family: 'Castoro', serif;
+}
+
+h1 {
+  text-align: center;
+  color: #f5f5f7;
+  font-family: 'Castoro', serif;
+}
+
+h2{
+  text-align: center;
+  color: #f5f5f7;
+  font-family: 'Castoro', serif;
+}
+
+/* For the TAU logo at the bottom left corner of the page */
+.home-image {
+  display: block;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  width: 10%;
+  height: auto;
+  margin-top: 5%;
+  margin-right: auto;
+  margin-left: auto;
+}
